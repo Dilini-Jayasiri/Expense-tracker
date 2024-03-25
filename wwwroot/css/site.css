@@ -139,6 +139,10 @@ body {
     padding: 10px 10px;
 }
 
+#logojpg{
+    height: 25px;
+    width: 25px;
+}
 /*Menu*/
 #menu {
     width: 100% !important;

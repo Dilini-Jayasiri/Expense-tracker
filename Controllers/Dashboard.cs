@@ -26,7 +26,7 @@ namespace Expense_tracker.Controllers
             int TotalExpense = SelectedTransactions.Where(i => i.Category.Type == "Expense").Sum(i => i.Amount);
             ViewBag.TotalExpense = TotalExpense.ToString("C0");
 
-            int Balance = TotalExpense - TotalIncome;
+            int Balance = TotalIncome - TotalExpense;
             CultureInfo culture= CultureInfo.CreateSpecificCulture("en-US");
             culture.NumberFormat.CurrencyNegativePattern = 1;
             ViewBag.Balance = String.Format(culture, "{0:C0}", Balance);
